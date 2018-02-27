@@ -58,6 +58,9 @@ if !exists("g:c_highlight_functions")
 endif
 if g:c_highlight_functions isnot 0
     syn match	cppUserFunction	display "[a-zA-Z_]\w*("me=e-1
+    " Rpc
+    syn match Rpc		display "rpc_client_\w*("me=e-1
+    syn match Rpc		display "rpc_server_\w*("me=e-1
 endif
 
 " Operation

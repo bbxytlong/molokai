@@ -330,6 +330,9 @@ if !exists("g:lua_highlight_function_name")
 endif
 if g:lua_highlight_function_name isnot 0
   syn match luaFunctionName	display "[a-zA-Z_]\w*("me=e-1
+  " Rpc
+  syn match Rpc		display "rpc_client_\w*("me=e-1
+  syn match Rpc		display "rpc_server_\w*("me=e-1
 endif
 
 " Define the default highlighting.
