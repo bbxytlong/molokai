@@ -136,7 +136,7 @@ end
 "
 if &t_Co > 255
    if s:molokai_original == 1
-      hi Normal                   ctermbg=234
+      hi Normal                   ctermbg=none
       hi CursorLine               ctermbg=235   cterm=none
       hi CursorLineNr ctermfg=208               cterm=none
    else
@@ -168,7 +168,17 @@ if &t_Co > 255
    hi FoldColumn      ctermfg=67  ctermbg=16
    hi Folded          ctermfg=67  ctermbg=16
    hi Function        ctermfg=118
+   hi FunctionName    ctermfg=11
    hi Identifier      ctermfg=208               cterm=none
+
+   hi Rpc             ctermfg=43
+   hi Pointer         ctermfg=171
+
+   hi Brace           ctermfg=161               cterm=bold
+
+   hi Operation       ctermfg=262
+   hi BlockParen      ctermfg=171
+
    hi Ignore          ctermfg=244 ctermbg=232
    hi IncSearch       ctermfg=193 ctermbg=16
 
@@ -224,7 +234,7 @@ if &t_Co > 255
    hi WarningMsg      ctermfg=231 ctermbg=238   cterm=bold
    hi WildMenu        ctermfg=81  ctermbg=16
 
-   hi Comment         ctermfg=59
+   hi Comment         ctermfg=244
    hi CursorColumn                ctermbg=236
    hi ColorColumn                 ctermbg=236
    hi LineNr          ctermfg=250 ctermbg=236
@@ -252,6 +262,10 @@ if &t_Co > 255
        hi Float           ctermfg=141
        hi Function        ctermfg=154
        hi Identifier      ctermfg=208
+       hi Rpc             ctermfg=43
+       hi Pointer         ctermfg=171
+       hi Operation       ctermfg=262
+       hi BlockParen      ctermfg=171
 
        hi Keyword         ctermfg=197               cterm=bold
        hi Operator        ctermfg=197
@@ -274,3 +288,4 @@ end
 " Must be at the end, because of ctermbg=234 bug.
 " https://groups.google.com/forum/#!msg/vim_dev/afPqwAFNdrU/nqh6tOM87QUJ
 set background=dark
+
