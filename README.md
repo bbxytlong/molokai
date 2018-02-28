@@ -47,3 +47,8 @@ let g:go_highlight_brace = 1
 let g:lua_highlight_function_name = 1
 ```
 
+## Custom Syntax
+
+Put `syntax/workspace_syntax.vim` to your project and rename to `.workspace_syntax.vim`, you can write yourself syntax. Like keyword.
+
+
