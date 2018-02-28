@@ -113,6 +113,14 @@ if exists("g:go_fold_enable")
   endif
 endif
 
+" Read the Project Custom syntax to start with
+runtime! syntax/workspace_syntax.vim
+let b:current_syntax_custom_file = expand("%:p:h")."/.workspace_syntax.vim"
+if filereadable(b:current_syntax_custom_file)
+  so %:p:h/.workspace_syntax.vim
+endif
+" echom b:current_syntax_custom_file
+
 syn case match
 
 syn keyword     goPackage           package

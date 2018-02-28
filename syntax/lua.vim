@@ -335,6 +335,15 @@ if g:lua_highlight_function_name isnot 0
   syn match Rpc		display "rpc_server_\w*("me=e-1
 endif
 
+" Read the Project Custom syntax to start with
+runtime! syntax/workspace_syntax.vim
+let b:current_syntax_custom_file = expand("%:p:h")."/.workspace_syntax.vim"
+if filereadable(b:current_syntax_custom_file)
+    so %:p:h/.workspace_syntax.vim
+endif
+" echom b:current_syntax_custom_file
+
+
 " Define the default highlighting.
 " For version 5.7 and earlier: only when not done already
 " For version 5.8 and later: only when an item doesn't have highlighting yet

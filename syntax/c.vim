@@ -473,7 +473,13 @@ if g:c_highlight_custom_type_ts isnot 0
     syntax match cUserType      display "[a-zA-Z_][a-zA-Z0-9_]*_[ts][^a-zA-Z0-9_]"me=e-1
 endif
 
-
+" Read the Project Custom syntax to start with
+runtime! syntax/workspace_syntax.vim
+let b:current_syntax_custom_file = expand("%:p:h")."/.workspace_syntax.vim"
+if filereadable(b:current_syntax_custom_file)
+    so %:p:h/.workspace_syntax.vim
+endif
+" echom b:current_syntax_custom_file
 
 
 if exists("c_minlines")
