@@ -410,7 +410,7 @@ syn match	cBitField	display ";\s*\I\i*\s*:\s*[1-9]"me=e-1 contains=cType
 
 " Function
 if !exists("g:c_highlight_functions")
-  let g:c_highlight_functions = 0
+  let g:c_highlight_functions = 1
 endif
 if g:c_highlight_functions isnot 0
     syn match	cUserFunction	display "[a-zA-Z_]\w*("me=e-1
@@ -421,7 +421,7 @@ endif
 
 " Operation
 if !exists("g:c_highlight_operators")
-  let g:c_highlight_operators= 0
+  let g:c_highlight_operators= 1
 endif
 if g:c_highlight_operators isnot 0
     syntax match cUserOperation display "[?:\.+=\-&|~%^]"
@@ -449,7 +449,7 @@ endif
 
 " Brace
 if !exists("g:c_highlight_brace")
-  let g:c_highlight_brace= 0
+  let g:c_highlight_brace= 1
 endif
 if g:c_highlight_brace isnot 0
     syntax match cBrace     display "{"
@@ -458,16 +458,16 @@ endif
 
 " Macro
 if !exists("g:c_highlight_macro")
-  let g:c_highlight_macro= 0
+  let g:c_highlight_macro= 1
 endif
 if g:c_highlight_macro isnot 0
-    syntax match cUserMacro1    display  "[^a-zA-Z0-9_"][A-Z_][A-Z0-9_][A-Z0-9_]*[^a-zA-Z0-9_"]"hs=s+1,he=e-1,ms=s+1,me=e-1
-    syntax match cUserMacro2    display  "^[A-Z_][A-Z0-9_][A-Z0-9_]*[^a-zA-Z0-9_"]"he=e-1,me=e-1
+    syntax match cUserMacro    display  "[^a-zA-Z0-9_"][A-Z_][A-Z0-9_][A-Z0-9_]*[^a-zA-Z0-9_"]"hs=s+1,he=e-1,ms=s+1,me=e-1
+    syntax match cUserMacro    display  "^[A-Z_][A-Z0-9_][A-Z0-9_]*[^a-zA-Z0-9_"]"he=e-1,me=e-1
 endif
 
 " Type
 if !exists("g:c_highlight_custom_type_ts")
-  let g:c_highlight_custom_type_ts = 0
+  let g:c_highlight_custom_type_ts = 1
 endif
 if g:c_highlight_custom_type_ts isnot 0
     syntax match cUserType      display "[a-zA-Z_][a-zA-Z0-9_]*_[ts][^a-zA-Z0-9_]"me=e-1
@@ -553,8 +553,7 @@ hi def link cUserType		Type
 hi def link cUserFunction	Function
 hi def link cUserOperation	Operation
 hi def link cBrace		Brace
-hi def link cUserMacro1		Macro
-hi def link cUserMacro2		Macro
+hi def link cUserMacro		Macro
 
 let b:current_syntax = "c"
 

@@ -31,11 +31,11 @@ if !exists("g:go_highlight_trailing_whitespace_error")
 endif
 
 if !exists("g:go_highlight_operators")
-  let g:go_highlight_operators = 0
+  let g:go_highlight_operators = 1
 endif
 
 if !exists("g:go_highlight_functions")
-  let g:go_highlight_functions = 0
+  let g:go_highlight_functions = 1
 endif
 
 if !exists("g:go_highlight_function_arguments")
@@ -43,7 +43,7 @@ if !exists("g:go_highlight_function_arguments")
 endif
 
 if !exists("g:go_highlight_function_calls")
-  let g:go_highlight_function_calls = 0
+  let g:go_highlight_function_calls = 1
 endif
 
 if !exists("g:go_highlight_fields")
@@ -51,7 +51,7 @@ if !exists("g:go_highlight_fields")
 endif
 
 if !exists("g:go_highlight_types")
-  let g:go_highlight_types = 0
+  let g:go_highlight_types = 1
 endif
 
 if !exists("g:go_highlight_build_constraints")
@@ -79,11 +79,11 @@ if !exists("g:go_highlight_variable_declarations")
 endif
 
 if !exists("g:go_highlight_brace")
-  let g:go_highlight_brace = 0
+  let g:go_highlight_brace = 1
 endif
 
 if !exists("g:go_highlight_custom_type_ts")
-  let g:go_highlight_custom_type_ts = 0
+  let g:go_highlight_custom_type_ts = 1
 endif
 
 let s:fold_block = 1

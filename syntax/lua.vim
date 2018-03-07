@@ -326,7 +326,7 @@ endif
 
 " FunctionName
 if !exists("g:lua_highlight_function_name")
-  let g:lua_highlight_function_name = 0
+  let g:lua_highlight_function_name = 1
 endif
 if g:lua_highlight_function_name isnot 0
   syn match luaFunctionName	display "[a-zA-Z_]\w*("me=e-1

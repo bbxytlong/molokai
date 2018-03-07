@@ -54,7 +54,7 @@ syn match cppMinMax "[<>]?"
 
 " Function
 if !exists("g:c_highlight_functions")
-  let g:c_highlight_functions = 0
+  let g:c_highlight_functions = 1
 endif
 if g:c_highlight_functions isnot 0
     syn match	cppUserFunction	display "[a-zA-Z_]\w*("me=e-1
@@ -65,7 +65,7 @@ endif
 
 " Operation
 if !exists("g:c_highlight_operators")
-  let g:c_highlight_operators= 0
+  let g:c_highlight_operators= 1
 endif
 if g:c_highlight_operators isnot 0
     syntax match cppUserOperation display "[?:\.+=\-&|~%^]"
@@ -93,7 +93,7 @@ endif
 
 " Brace
 if !exists("g:c_highlight_brace")
-  let g:c_highlight_brace= 0
+  let g:c_highlight_brace= 1
 endif
 if g:c_highlight_brace isnot 0
     syntax match cppBrace     display "{"
@@ -102,16 +102,16 @@ endif
 
 " Macro
 if !exists("g:c_highlight_macro")
-  let g:c_highlight_macro= 0
+  let g:c_highlight_macro= 1
 endif
 if g:c_highlight_macro isnot 0
-    syntax match cppUserMacro1    display  "[^a-zA-Z0-9_"][A-Z_][A-Z0-9_][A-Z0-9_]*[^a-zA-Z0-9_"]"hs=s+1,he=e-1,ms=s+1,me=e-1
-    syntax match cppUserMacro2    display  "^[A-Z_][A-Z0-9_][A-Z0-9_]*[^a-zA-Z0-9_"]"he=e-1,me=e-1
+    syntax match cppUserMacro    display  "[^a-zA-Z0-9_"][A-Z_][A-Z0-9_][A-Z0-9_]*[^a-zA-Z0-9_"]"hs=s+1,he=e-1,ms=s+1,me=e-1
+    syntax match cppUserMacro    display  "^[A-Z_][A-Z0-9_][A-Z0-9_]*[^a-zA-Z0-9_"]"he=e-1,me=e-1
 endif
 
 " Type
 if !exists("g:c_highlight_custom_type_ts")
-  let g:c_highlight_custom_type_ts = 0
+  let g:c_highlight_custom_type_ts = 1
 endif
 if g:c_highlight_custom_type_ts isnot 0
     syntax match cppUserType      display "[a-zA-Z_][a-zA-Z0-9_]*_[ts][^a-zA-Z0-9_]"me=e-1
@@ -151,8 +151,7 @@ if version >= 508 || !exists("did_cpp_syntax_inits")
   HiLink cppUserFunction  	Function
   HiLink cppUserOperation	Operation
   HiLink cppBrace		Brace
-  HiLink cppUserMacro1		Macro
-  HiLink cppUserMacro2		Macro
+  HiLink cppUserMacro		Macro
 
   delcommand HiLink
 endif
