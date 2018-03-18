@@ -337,9 +337,9 @@ endif
 
 " Read the Project Custom syntax to start with
 runtime! syntax/workspace_syntax.vim
-let b:current_syntax_custom_file = expand("%:p:h")."/.workspace_syntax.vim"
+let b:current_syntax_custom_file = GetFileInParentDirs(expand('%:p:h'), ".workspace_syntax.vim")
 if filereadable(b:current_syntax_custom_file)
-    so %:p:h/.workspace_syntax.vim
+    execute "so ".b:current_syntax_custom_file
 endif
 " echom b:current_syntax_custom_file
 
