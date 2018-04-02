@@ -29,26 +29,10 @@ let g:rehash256 = 1
 If you prefer the scheme to highlight the syntax, put this in your .vimrc file: 
 ```
 let g:molokai_original = 1
-" c/cpp syntax
-let g:c_highlight_brace = 1
-let g:c_highlight_macro = 1
-let g:c_highlight_functions = 1
-let g:c_highlight_operators = 1
-let g:c_highlight_custom_type_ts = 1
-" go syntax
-let g:go_highlight_functions = 1
-let g:go_highlight_function_calls = 1
-let g:go_highlight_function_arguments = 1
-let g:go_highlight_types = 1
-let g:go_highlight_operators = 1
-let g:go_highlight_custom_type_ts = 1
-let g:go_highlight_brace = 1
-" lua syntax
-let g:lua_highlight_function_name = 1
 ```
 
 ## Custom Syntax
+You can also use the [nine2/vim-custom-syntax](https://github.com/nine2/vim-custom-syntax) plugin to customize the extended syntax highlighting，it is very beautiful！
 
-Put `syntax/workspace_syntax.vim` to your project and rename to `.workspace_syntax.vim`, you can write yourself syntax. Like keyword.
 
 
