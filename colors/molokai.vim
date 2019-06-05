@@ -52,7 +52,8 @@ hi FoldColumn      guifg=#465457 guibg=#000000
 hi Folded          guifg=#465457 guibg=#000000
 hi Function        guifg=#A6E22E
 hi FunctionArgument guifg=#0000FF
-hi Identifier      guifg=#FD971F
+" hi Identifier      guifg=#FD971F
+hi Identifier       guifg=#66D9EF
 hi Ignore          guifg=#808080 guibg=bg
 hi IncSearch       guifg=#C4BE89 guibg=#000000
 
@@ -171,14 +172,18 @@ if &t_Co > 255
    hi Function        ctermfg=118
    hi FunctionName    ctermfg=11
    hi FunctionArgument ctermfg=14  cterm=bold
-   hi Identifier      ctermfg=208               cterm=none
+   " hi Identifier      ctermfg=208               cterm=none
+   " hi Identifier      ctermfg=81              cterm=none
+   " hi Identifier      ctermfg=133               cterm=none
+   hi Identifier      ctermfg=30 cterm=bold
 
    hi Rpc             ctermfg=43
    hi Pointer         ctermfg=171
 
    hi Brace           ctermfg=161               cterm=bold
 
-   hi Operation       ctermfg=262
+   " hi Operation       ctermfg=262
+   hi Operation       ctermfg=127               cterm=bold
    hi BlockParen      ctermfg=171
 
    hi Ignore          ctermfg=244 ctermbg=232
@@ -264,10 +269,14 @@ if &t_Co > 255
        hi Float           ctermfg=141
        hi Function        ctermfg=154
        hi FunctionArgument      ctermfg=12
-       hi Identifier      ctermfg=208
+       " hi Identifier      ctermfg=208
+       " hi Identifier      ctermfg=81
+       " hi Identifier      ctermfg=133               cterm=none
+       hi Identifier      ctermfg=30               cterm=bold
        hi Rpc             ctermfg=43
        hi Pointer         ctermfg=171
-       hi Operation       ctermfg=262
+       " hi Operation       ctermfg=262
+       hi Operation       ctermfg=127             cterm=bold
        hi BlockParen      ctermfg=171
 
        hi Keyword         ctermfg=197               cterm=bold
