@@ -51,7 +51,7 @@ hi Float           guifg=#AE81FF
 hi FoldColumn      guifg=#465457 guibg=#000000
 hi Folded          guifg=#465457 guibg=#000000
 hi Function        guifg=#A6E22E
-hi FunctionArgument guifg=#0000FF
+hi FunctionArgument guifg=#00ffFF
 hi Field           guifg=#00afaf
 hi Builtins        guifg=#F92672               gui=bold
 hi Identifier      guifg=#FD971F
@@ -267,7 +267,7 @@ if &t_Co > 255
        hi Exception       ctermfg=154               cterm=bold
        hi Float           ctermfg=141
        hi Function        ctermfg=154
-       hi FunctionArgument      ctermfg=12
+       hi FunctionArgument      ctermfg=14
        hi Field           ctermfg=37               cterm=bold
        hi Builtins        ctermfg=197               cterm=bold
        hi Identifier      ctermfg=208
@@ -295,6 +295,24 @@ if &t_Co > 255
    endif
 end
 
+" color
+" 安装插件：
+" Bundle 'guns/xterm-color-table.vim', 使用命令:XtermColorTable 查看颜色表
+hi LightYellow    ctermfg=11      cterm=none
+hi LightRed       ctermfg=1      cterm=none
+hi LightGrey      ctermfg=7      cterm=none
+hi LightGreen     ctermfg=2      cterm=none
+hi LightBlue      ctermfg=4     cterm=none
+hi LightPink      ctermfg=13     cterm=none
+hi LightNoName    ctermfg=14     cterm=none
+
+hi DarkYellow     ctermfg=142     cterm=none
+hi DarkRed        ctermfg=124      cterm=none
+hi DarkGrey      ctermfg=8      cterm=none
+hi DarkBlue       ctermfg=31      cterm=none
+hi DarkGreen      ctermfg=34      cterm=none
+hi DarkPink       ctermfg=5       cterm=none
+hi DarkNoName     ctermfg=6     cterm=none
 " Must be at the end, because of ctermbg=234 bug.
 " https://groups.google.com/forum/#!msg/vim_dev/afPqwAFNdrU/nqh6tOM87QUJ
 set background=dark
