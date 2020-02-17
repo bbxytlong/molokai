@@ -50,7 +50,7 @@ hi Exception       guifg=#A6E22E               gui=bold
 hi Float           guifg=#AE81FF
 hi FoldColumn      guifg=#465457 guibg=#000000
 hi Folded          guifg=#465457 guibg=#000000
-hi Function        guifg=#A6E22E
+hi Function        guifg=#A6E22E gui=bold
 hi FunctionArgument guifg=#00ffFF
 hi Field           guifg=#00afaf
 hi Builtins        guifg=#F92672               gui=bold
@@ -140,7 +140,8 @@ end
 if &t_Co > 255
    if s:molokai_original == 1
       hi Normal                   ctermbg=none
-      hi CursorLine               ctermbg=235   cterm=none
+      " hi CursorLine               ctermbg=235   cterm=none
+      hi CursorLine               ctermbg=238   cterm=none
       hi CursorLineNr ctermfg=208               cterm=none
    else
       hi Normal       ctermfg=252 ctermbg=233
@@ -170,8 +171,9 @@ if &t_Co > 255
    hi Float           ctermfg=135
    hi FoldColumn      ctermfg=67  ctermbg=16
    hi Folded          ctermfg=67  ctermbg=16
-   hi Function        ctermfg=118
-   hi FunctionName    ctermfg=11
+   " hi Function        ctermfg=118 cterm=bold
+   hi Function        ctermfg=82 cterm=bold
+   hi FunctionName    ctermfg=11 cterm=bold
    hi FunctionArgument ctermfg=14  cterm=bold
    hi Field           ctermfg=37               cterm=bold
    hi Builtins        ctermfg=197               cterm=bold
@@ -209,6 +211,7 @@ if &t_Co > 255
    hi Question        ctermfg=81
    hi Repeat          ctermfg=161               cterm=bold
    hi Search          ctermfg=0   ctermbg=222   cterm=NONE
+   " hi SameId          ctermbg=32   cterm=bold
 
    " marks column
    hi SignColumn      ctermfg=118 ctermbg=235
@@ -237,13 +240,16 @@ if &t_Co > 255
    hi VertSplit       ctermfg=244 ctermbg=232   cterm=bold
    hi VisualNOS                   ctermbg=238
    hi Visual                      ctermbg=235
+   " hi Visual                      ctermbg=238
    hi WarningMsg      ctermfg=231 ctermbg=238   cterm=bold
    hi WildMenu        ctermfg=81  ctermbg=16
 
    hi Comment         ctermfg=244
-   hi CursorColumn                ctermbg=236
+   " hi CursorColumn                ctermbg=236
+   hi CursorColumn                ctermbg=26
    hi ColorColumn                 ctermbg=236
-   hi LineNr          ctermfg=250 ctermbg=236
+   " hi LineNr          ctermfg=250 ctermbg=236
+   hi LineNr          ctermfg=244 ctermbg=237
    hi NonText         ctermfg=59
 
    hi SpecialKey      ctermfg=59
@@ -266,7 +272,7 @@ if &t_Co > 255
        hi Error           ctermfg=222 ctermbg=233
        hi Exception       ctermfg=154               cterm=bold
        hi Float           ctermfg=141
-       hi Function        ctermfg=154
+       hi Function        ctermfg=154 cterm=bold
        hi FunctionArgument      ctermfg=14
        hi Field           ctermfg=37               cterm=bold
        hi Builtins        ctermfg=197               cterm=bold
